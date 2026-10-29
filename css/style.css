@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary: #FF3C00;
+    --primary-glow: rgba(255, 60, 0, 0.4);
+    --secondary: #00E5FF;
+    --bg-dark: #0A0A0A;
+    --bg-card: #161616;
+    --text-main: #FFFFFF;
+    --text-dim: #A0A0A0;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* --- Utilities --- */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* --- Header --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo img {
+    height: 40px;
+    filter: drop-shadow(0 0 5px var(--primary));
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align container to the right */
+    position: relative;
+    padding-top: 80px;
+    background: radial-gradient(circle at 80% 50%, rgba(255, 60, 0, 0.15), transparent 40%);
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    margin-right: 0;
+    padding-right: 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--primary-glow);
+    transition: all 0.5s ease;
+}
+
+#dynamic-text {
+    display: block;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter: drop-shadow(0 0 15px rgba(255, 60, 0, 0.4));
+    transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    margin-bottom: 2.5rem;
+}
+
+.hero-visual {
+    position: absolute;
+    left: 0; /* Move to left end */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55%; /* Slightly smaller to leave room */
+    height: 90%;
+    z-index: 1;
+}
+
+.hero-img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, black 60%, transparent); /* Sharper mask */
+}
+
+/* Flying Cars Animation Refined */
+.flying-car-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1000px;
+    z-index: 3;
+}
+
+.hero .flying-car {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 40px var(--primary-glow);
+    filter: brightness(1.2);
+    z-index: 5;
+}
+
+.hero .car-1 {
+    top: 15%;
+    right: 25%;
+    animation: fly-pro-1 12s infinite ease-in-out;
+}
+
+.hero .car-2 {
+    bottom: 20%;
+    right: 12%;
+    animation: fly-pro-2 15s infinite ease-in-out;
+    width: 120px;
+    height: 120px;
+    border-color: var(--secondary);
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.5);
+}
+
+@keyframes fly-pro-1 {
+    0%, 100% { transform: translate3d(0, 0, 0) rotateY(-5deg) rotateX(5deg); }
+    33% { transform: translate3d(-30px, 20px, 50px) rotateY(5deg) rotateX(-5deg); }
+    66% { transform: translate3d(20px, -30px, -20px) rotateY(-10deg) rotateX(10deg); }
+}
+
+@keyframes fly-pro-2 {
+    0%, 100% { transform: translate3d(0, 0, 0) rotateY(10deg) rotateX(-5deg); }
+    50% { transform: translate3d(50px, -40px, 100px) rotateY(-5deg) rotateX(10deg); }
+}
+
+/* --- Sections --- */
+section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.section-title h2 span {
+    color: var(--primary);
+}
+
+/* --- Product Cards --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 1.5rem;
+    position: relative;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, var(--primary-glow), transparent 70%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.product-card:hover::before {
+    opacity: 0.1;
+}
+
+.card-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.product-card:hover .card-image {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--text-dim);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-footer {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--primary);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.add-btn:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* --- Coupon Section --- */
+.coupon-banner {
+    background: linear-gradient(135deg, var(--primary), #FF7B00);
+    border-radius: 30px;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.coupon-content {
+    position: relative;
+    z-index: 2;
+}
+
+.coupon-banner h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.coupon-code {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px dashed white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    padding: 4rem 0;
+    background: #050505;
+    border-top: 1px solid var(--glass-border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-col ul a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col ul a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+/* Scroll Animation classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

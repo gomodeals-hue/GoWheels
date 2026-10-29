@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goHOTWHEEELS | Premium Hot Wheels Collector Store</title>
+    <meta name="description"
+        content="Shop the rarest and most exclusive Hot Wheels cars at goHOTWHEEELS. The ultimate destination for die-cast collectors.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="goHOTWHEEELS Logo">
+                go<span>Wheels</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#deals">Flash Deals</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <div style="position: relative;">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span
+                        style="position: absolute; top: -8px; right: -10px; background: var(--primary); font-size: 0.7rem; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-visual">
+                <img src="assets/images/hero.png" alt="Flying Hot Wheels" class="hero-img-bg">
+                <!-- Refined Flying Cars -->
+                <div class="flying-car-wrapper">
+                    <img src="assets/images/product1.png" alt="Flying Car" class="flying-car car-1">
+                    <img src="assets/images/product2.png" alt="Flying Car" class="flying-car car-2">
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>RACE BEYOND <span id="dynamic-text">LIMITS.</span></h1>
+                <p>Experience the ultimate collection of die-cast engineering. From vintage classics to futuristic
+                    prototypes, find your dream ride today.</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn btn-outline" style="margin-left: 1rem;">View Rare Finds</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Section -->
+        <section class="container" id="trending">
+            <div class="section-title">
+                <div>
+                    <h2>Trending <span>Now</span></h2>
+                    <p style="color: var(--text-dim);">The hottest drops in the die-cast world.</p>
+                </div>
+                <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 600;">View All <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="product-grid">
+                <!-- Card 1 -->
+                <div class="product-card reveal">
+                    <div class="card-badge">HOT NEW</div>
+                    <img src="assets/images/product1.png" alt="Gold Sports Car" class="card-image">
+                    <div class="card-info">
+                        <h3>Gold Pursuit X1</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Limited Edition 2024
+                        </p>
+                        <div class="card-price">
+                            ₹3,499
+                            <span class="old-price">₹4,999</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: var(--secondary);">COLLECTOR</div>
+                    <img src="assets/images/product2.png" alt="Futuristic Concept" class="card-image">
+                    <div class="card-info">
+                        <h3>Neon Velocity</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Cyberpunk Series</p>
+                        <div class="card-price">
+                            ₹2,599
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: #33FF33;">NEW ARRIVAL</div>
+                    <img src="assets/images/product3.png" alt="Red Muscle Car" class="card-image">
+                    <div class="card-info">
+                        <h3>Red Beast Muscle</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Classic American</p>
+                        <div class="card-price">
+                            ₹1,899
+                            <span class="old-price">₹2,499</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card reveal">
+                    <div class="card-badge">LEGENDARY</div>
+                    <img src="assets/images/product1.png" alt="Gold Sports Car" class="card-image"
+                        style="filter: hue-rotate(90deg);">
+                    <div class="card-info">
+                        <h3>Emerald Titan</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Rare Forest Edition
+                        </p>
+                        <div class="card-price">
+                            ₹4,200
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 5 (NEW) -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: var(--secondary);">LIMITED</div>
+                    <img src="assets/images/product2.png" alt="Futuristic Concept" class="card-image"
+                        style="filter: hue-rotate(180deg);">
+                    <div class="card-info">
+                        <h3>Violet Vengeance</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Midnight Street
+                            Series</p>
+                        <div class="card-price">
+                            ₹2,850
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 6 (NEW) -->
+                <div class="product-card reveal">
+                    <div class="card-badge">RETRO</div>
+                    <img src="assets/images/product3.png" alt="Red Muscle Car" class="card-image"
+                        style="filter: grayscale(0.5) contrast(1.2);">
+                    <div class="card-info">
+                        <h3>Steel Phantom</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Vintage Heritage</p>
+                        <div class="card-price">
+                            ₹1,950
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 7 (NEW) -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: var(--secondary);">EXCLUSIVE</div>
+                    <img src="assets/images/product2.png" alt="Futuristic Concept" class="card-image"
+                        style="filter: hue-rotate(45deg);">
+                    <div class="card-info">
+                        <h3>Cobalt Drifter</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Neon Nights Series
+                        </p>
+                        <div class="card-price">
+                            ₹2,499
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 8 (NEW) -->
+                <div class="product-card reveal">
+                    <div class="card-badge">HOT NEW</div>
+                    <img src="assets/images/product1.png" alt="Gold Sports Car" class="card-image"
+                        style="filter: sepia(0.8) hue-rotate(320deg);">
+                    <div class="card-info">
+                        <h3>Desert Mirage</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Rally Championship
+                        </p>
+                        <div class="card-price">
+                            ₹3,100
+                            <span class="old-price">₹3,500</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Selling Section -->
+        <section class="container" id="top-selling"
+            style="background: rgba(255, 60, 0, 0.03); border-radius: 40px; margin: 4rem auto; padding: 4rem 2rem;">
+            <div class="section-title">
+                <div>
+                    <h2>Top <span>Selling</span></h2>
+                    <p style="color: var(--text-dim);">The community favorites you can't miss.</p>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Card 1 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: #FFD700; color: #000;">#1 BEST SELLER</div>
+                    <img src="assets/images/product2.png" alt="Futuristic Concept" class="card-image"
+                        style="filter: brightness(1.2);">
+                    <div class="card-info">
+                        <h3>Midnight Rover</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Night Ops Series</p>
+                        <div class="card-price">
+                            ₹2,999
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: #FFD700; color: #000;">#2 BEST SELLER</div>
+                    <img src="assets/images/product3.png" alt="Red Muscle Car" class="card-image"
+                        style="filter: saturate(1.5);">
+                    <div class="card-info">
+                        <h3>Chrome Crusher</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Industrial Heavy</p>
+                        <div class="card-price">
+                            ₹3,150
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: #FFD700; color: #000;">#3 BEST SELLER</div>
+                    <img src="assets/images/product3.png" alt="Muscle Car" class="card-image"
+                        style="filter: hue-rotate(90deg) saturate(2);">
+                    <div class="card-info">
+                        <h3>Toxic Avenger (Special Edition)</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Biohazard Trackset
+                        </p>
+                        <div class="card-price">
+                            ₹2,750
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card reveal">
+                    <div class="card-badge" style="background: #FFD700; color: #000;">#4 BEST SELLER</div>
+                    <img src="assets/images/product1.png" alt="Sports Car" class="card-image"
+                        style="filter: grayscale(1) brightness(1.5);">
+                    <div class="card-info">
+                        <h3>Platinum Edition</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1rem;">Anniversary Series
+                        </p>
+                        <div class="card-price">
+                            ₹4,500
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div style="color: #FFD700;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coupon Section -->
+        <section class="container" id="deals">
+            <div class="coupon-banner reveal">
+                <div class="coupon-content">
+                    <h2>UNLEASH THE <span>SPEED.</span></h2>
+                    <p style="font-size: 1.5rem; margin-bottom: 2rem;">Get 25% OFF on your first purchase of the
+                        Collector Series.</p>
+                    <div class="coupon-code">goHOTWHEEELS25</div>
+                </div>
+                <div class="coupon-img">
+                    <img src="assets/images/product1.png" alt="Promo Car"
+                        style="width: 400px; transform: rotate(-20deg) translateY(50px);">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo">
+                    <img src="assets/images/logo.png" alt="goHOTWHEEELS Logo">
+                    go<span>Wheels</span>
+                </a>
+                <p style="color: var(--text-dim); margin-top: 1.5rem;">The world's premier destination for Hot Wheels
+                    enthusiasts and collectors. High-octane deals delivered to your doorstep.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="#">Rare Finds</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Track Sets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="color: var(--text-dim); margin-bottom: 1.5rem;">Join the race for exclusive updates.</p>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="Email Address"
+                        style="padding: 0.8rem; border-radius: 10px; border: 1px solid var(--glass-border); background: var(--bg-card); color: white; flex: 1;">
+                    <button class="add-btn" style="width: auto; padding: 0 1.5rem;">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); text-align: center; color: var(--text-dim); font-size: 0.9rem;">
+            &copy; 2026 goHOTWHEEELS. All rights reserved. Designed for speed.
+        </div>
+    </footer>
+
+    <!-- GSAP for 3D Parallax Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
